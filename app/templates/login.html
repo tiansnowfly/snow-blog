@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block login_content %}
+    <div class="sign-in-div">
+        <h1>Sign In</h1>
+        <form action="" method="post" novalidate>
+            {#  form.hidden_tag()模板参数生成了一个隐藏字段，其中包含一个用于保护表单免受CSRF攻击的token  #}
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username(size=32,class='form-control') }}<br>
+{#                {% for error in form.username.errors %}#}
+{#                <span style="color: red;">[{{ error }}]</span>#}
+{#                {% endfor %}#}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32,class='form-control') }}<br>
+{#                {% for error in form.password.errors %}#}
+{#                <span style="color: red;">[{{ error }}]</span>#}
+{#                {% endfor %}#}
+            </p>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label(class='form-check-label') }}</p>
+            <p>{{ form.submit(class="btn btn-primary") }}</p>
+        </form>
+        <br>
+    </div>
+    <footer class="home-footer">
+        <h4>Welcome to SnowBlog!</h4>
+        <p>You can record life and study bit by bit!</p>
+    </footer>
+{% endblock %}

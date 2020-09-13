@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'home-snow-bold';
+    src: url("../fonts/Comfortaa-Bold.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: home-snow-bold, serif;
+}
+.home-snow{
+    width: 100%;
+    height: 75%;
+}
+.home-snow img{
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-300px);
+}
+.home-footer{
+    text-align: center;
+}
+.sign-in-div{
+    margin: auto;
+    margin-top: 20px;
+    width: 40%;
+    height: 78%;
+    background-image: url("../images/snow.svg");
+}
