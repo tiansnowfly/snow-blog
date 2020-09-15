@@ -2,63 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">#}
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+{#    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">#}
     <title>User interface</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .m-nav{
+            height: 6%;
+            box-sizing: border-box;
+        }
+        .m-content{
+            height: 94%;
+            box-sizing: border-box;
+        }
+        .right-nav{
+            width: 16%;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        .blog-content{
+            width: 84%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
     {# 构建顶部导航栏 #}
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">菜鸟教程</a>
-    </div>
-    <div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">iOS</a></li>
-            <li><a href="#">SVN</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Java
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">jmeter</a></li>
-                    <li><a href="#">EJB</a></li>
-                    <li><a href="#">Jasper Report</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
+    <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top m-nav">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Setting</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            </ul>
+        </div>
+        {#  将内容调整到最右端 #}
+        <div class="collapse navbar-collapse justify-content-end">
+            <a href="#" class="btn btn-dark btn-sm">Logout</a>
+        </div>
+    </nav>
+
+    <div class="m-content">
+        <div class="right-nav bg-light border rounded">
+            <nav class="navbar navbar-light bg-light navbar-fixed-top m-nav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Setting</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Setting</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Setting</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                 </ul>
-            </li>
-        </ul>
+            </nav>
+        </div>
+        <div class="blog-content col-md-2">
+
+        </div>
     </div>
-    </div>
-</nav>
-{#    <nav class="navbar navbar-expand-lg navbar-light bg-danger navbar-fixed-bottom">#}
-{#        <a class="navbar-brand" href="#">Navbar</a>#}
-{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
-{#        <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
-{#        <div class="collapse navbar-collapse" id="navbarNav">#}
-{#            <ul class="navbar-nav">#}
-{#                <li class="nav-item active">#}
-{#                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                <a class="nav-link" href="#">Features</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                <a class="nav-link" href="#">Pricing</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>#}
-{#                </li>#}
-{#            </ul>#}
-{#        </div>#}
-{#    </nav>#}
+
 </body>
 </html>
